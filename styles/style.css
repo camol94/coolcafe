@@ -388,6 +388,56 @@ ul li a:hover {
 .top-slider {
   height: 200px;
 }
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.slider-container {
+  margin-top: 80px;
+  position: relative;
+  max-height: 80vh;
+}
+.slider-container img {
+  width: 100%;
+  max-height: 80vh;
+}
+.slides-container {
+  position: relative;
+}
+.slider-button {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  top: 50%;
+  color: #fff;
+  padding: 8px 16px;
+}
+.slide-left {
+  left: 2px;
+}
+.slide-right {
+  right: 2px;
+}
+.slider-info {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 5px 8px;
+  text-align: center;
+  color: #FF6C00;
+  font-weight: 800;
+  border-top: 1px solid #7520ED;
+  border-bottom: 1px solid #7520ED;
+  background: rgba(116, 31, 237, 0.4);
+}
+.sectionSlides2 {
+  animation: fading 2s infinite;
+}
 .section-title {
   text-align: center;
   font-size: 28px;
@@ -415,6 +465,11 @@ ul li a:hover {
   background-color: #c68c00;
   transform: translateX(-50%);
 }
+.section-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .sala img,
 .kawiarnia img,
 .oferta img {
@@ -435,4 +490,13 @@ ul li a:hover {
   padding: 10px 0;
   text-align: center;
   color: #fff;
+}
+.slideshow {
+  margin: 5px auto;
+  position: relative;
+  min-height: 240px;
+  height: 100%;
+}
+.slideshow > div {
+  position: absolute;
 }

@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>CoolCafe</title>
-    <!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- mobilne menu -->
-	<script src="js/slicknav.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>CoolCafe</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- mobilne menu -->
+  <script src="js/slicknav.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
+
 <body>
   <header>
-        <nav>
-            <div class="container">
-                <div class="navbar">
-                    <div class="nav-logo">
-                        <img src="images/logo.jpg" alt="">
-                      </div>
+    <nav>
+      <div class="container">
+        <div class="navbar">
+          <div class="nav-logo">
+            <img src="images/logo.jpg" alt="">
+          </div>
 
-                      <div class="main-menu-content">
-                        <ul id="main-menu">
-                            <li><a href="#" class="menu-link-active">Start</a></li>
-                              <li><a href="#">Kawiarnia</a></li>
-                              <li><a href="#">Sala Zabaw</a></li>
-                              <li><a href="#">Oferta</a></li>
-                              <li><a href="#">Galeria</a></li>
-                              <li><a href="#">Kontakt</a></li>
-                          </ul>
-                      </div>
-                      <!-- menu mobilne -->
-                      <div id="attach-menu-mobile">
+          <div class="main-menu-content">
+            <ul id="main-menu">
+              <li><a href="#" class="menu-link-active">Start</a></li>
+              <li><a href="#">Kawiarnia</a></li>
+              <li><a href="#">Sala Zabaw</a></li>
+              <li><a href="#">Oferta</a></li>
+              <li><a href="#">Galeria</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+          </div>
+          <!-- menu mobilne -->
+          <div id="attach-menu-mobile">
 
-                      </div>
-                  </div>
-              </div>
-          </nav>
-      </header>
-    <div class="top-slider">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- <div class="top-slider">
       <ul class="bxslider">
         <li>
           <div class="main-slide-1">
@@ -62,121 +65,240 @@
           </div>
         </li>
       </ul>
+    </div> -->
+  <div class="slides-container">
+    <div class="slider-container mySlides">
+      <img src="images/kawiarnia1.jpg">
+      <div class="slider-info">
+        Kawiarnia
+      </div>
     </div>
-    <section class="kawiarnia">
-      <div class="container">
-        <h2 class="section-title">Kawiarnia</h2>
-        <div class="section-content">
-          <div class="single-col opis">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quae consequatur rem dolore expedita, placeat asperiores laboriosam a. Ipsam odit, possimus reiciendis doloremque quidem ad quia fuga sunt fugiat, non, dolore distinctio neque eaque quasi, error sed. Quod, optio, impedit.
-          </div>
-          <div class="single-col">
-            <img src="images/kawiarnia1.jpg" alt="">
-          </div>
-          <div class="single-col cennik">
-            <ul>
-              <li>Kawa 5zł</li>
-              <li>Herbata 10zł</li>
-              <li>Ciastko 15zł</li>
-              <li>Tort 20zł</li>
-              <li>Wata 25zł</li>
-              <li>Koktajl 30zł</li>
-            </ul>
+    <div class="slider-container mySlides">
+      <img src="images/sala1.jpg">
+      <div class="slider-info">
+        Sala Zabaw
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="slider-button slide-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="slider-button slide-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+  </div>
+
+  <section class="kawiarnia">
+    <div class="container">
+      <h2 class="section-title">Kawiarnia</h2>
+      <div class="section-content">
+        <div class="single-col opis">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quae consequatur rem dolore expedita, placeat asperiores laboriosam a. Ipsam odit, possimus reiciendis doloremque quidem ad quia fuga sunt fugiat, non, dolore distinctio neque eaque quasi,
+          error sed. Quod, optio, impedit.
+        </div>
+        <div class="single-col">
+          <div id="kawiarnia-gal" class="slideshow">
+            <div>
+              <img src="images/img_fjords.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/img_lights.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/kawiarnia1.jpg" alt="">
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="sala">
-      <div class="container">
-        <h2 class="section-title">Sala Zabaw</h2>
-        <div class="section-content">
-          <div class="single-col opis">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit magni recusandae praesentium maxime neque voluptatem illum, dolore qui adipisci sed nostrum provident enim ducimus quas error voluptate earum quo harum delectus! Commodi magnam delectus quam, facilis ut fuga temporibus officia.
-          </div>
-          <div class="single-col">
-            <img src="images/kawiarnia1.jpg" alt="">
-          </div>
-          <div class="single-col cennik">
-            <ul>
-              <li>Pierwsza godzina 10zł</li>
-              <li>Druga godzina 6zł</li>
-              <li>Trzecia godzina 4zł</li>
-              <li>Formuła unlimited 20zł</li>
-              <li>coś tam</li>
-              <li>coś</li>
-            </ul>
-          </div>
+        <div class="single-col cennik">
+          <ul>
+            <li>Kawa 5zł</li>
+            <li>Herbata 10zł</li>
+            <li>Ciastko 15zł</li>
+            <li>Tort 20zł</li>
+            <li>Wata 25zł</li>
+            <li>Koktajl 30zł</li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="oferta">
-      <div class="container">
-        <h2 class="section-title">Oferta</h2>
-        <div class="section-content">
-          <div class="single-col opis">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vero est modi voluptatem dicta. Explicabo officia, dolore blanditiis, quasi facilis culpa. Dignissimos eaque, fugit voluptatum quo velit rem aliquid praesentium, laudantium sed possimus eius, ipsum eveniet omnis exercitationem tempora delectus!
-          </div>
-          <div class="single-col">
-            <img src="images/kawiarnia1.jpg" alt="">
-          </div>
-          <div class="single-col cennik">
-            OPIS
+    </div>
+  </section>
+  <section class="sala">
+    <div class="container">
+      <h2 class="section-title">Sala Zabaw</h2>
+      <div class="section-content">
+        <div class="single-col opis">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit magni recusandae praesentium maxime neque voluptatem illum, dolore qui adipisci sed nostrum provident enim ducimus quas error voluptate earum quo harum delectus! Commodi magnam delectus
+          quam, facilis ut fuga temporibus officia.
+        </div>
+        <div class="single-col">
+          <div id="sala-gal" class="slideshow">
+            <div>
+              <img src="images/img_fjords.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/img_lights.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/kawiarnia1.jpg" alt="">
+            </div>
           </div>
         </div>
+        <div class="single-col cennik">
+          <ul>
+            <li>Pierwsza godzina 10zł</li>
+            <li>Druga godzina 6zł</li>
+            <li>Trzecia godzina 4zł</li>
+            <li>Formuła unlimited 20zł</li>
+            <li>coś tam</li>
+            <li>coś</li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <!-- <section class="galeria">
+    </div>
+  </section>
+  <section class="oferta">
+    <div class="container">
+      <h2 class="section-title">Oferta</h2>
+      <div class="section-content">
+        <div class="single-col opis">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vero est modi voluptatem dicta. Explicabo officia, dolore blanditiis, quasi facilis culpa. Dignissimos eaque, fugit voluptatum quo velit rem aliquid praesentium, laudantium sed possimus eius,
+          ipsum eveniet omnis exercitationem tempora delectus!
+        </div>
+        <div class="single-col">
+          <div id="oferta-gal" class="slideshow">
+            <div>
+              <img src="images/img_fjords.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/img_lights.jpg" alt="">
+            </div>
+            <div>
+              <img src="images/kawiarnia1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="single-col cennik">
+          OPIS
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="galeria">
       <div class="container">
         <h2 class="section-title">Galeria</h2>
       </div>
     </section> -->
-    <section class="kontakt">
+  <section class="kontakt">
+    <div class="container">
+      <h2 class="section-title">Kontakt</h2> mapa + dane
+      <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2907.2630883635507!2d20.81039000428763!3d52.212369871863075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d52.2135439!2d20.8078879!5e0!3m2!1spl!2spl!4v1502390594591" width="100%"
+        height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-main">
       <div class="container">
-        <h2 class="section-title">Kontakt</h2>
-        mapa + dane
-        <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2907.2630883635507!2d20.81039000428763!3d52.212369871863075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d52.2135439!2d20.8078879!5e0!3m2!1spl!2spl!4v1502390594591" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
-    </section>
-    <footer>
-      <div class="footer-main">
-        <div class="container">
-          <div class="single-col social">
-            <h3 class="column-title">Social</h3>
-            dane
-          </div>
-          <div class="single-col godziny">
-            <h3 class="column-title">Godziny Otwarcia</h3>
-            godziny
-          </div>
-          <div class="single-col galeria">
-            <h3 class="column-title">Galeria</h3>
-            <ul>
-              <li><img src="images/galeria1.jpg" alt=""></li>
-              <li><img src="images/galeria2.jpg" alt=""></li>
-              <li><img src="images/galeria1.jpg" alt=""></li>
-              <li><img src="images/galeria2.jpg" alt=""></li>
-              <li><img src="images/galeria1.jpg" alt=""></li>
-              <li><img src="images/galeria2.jpg" alt=""></li>
-            </ul>
-            <a href="">Więcej zdjęc</a>
-          </div>
+        <div class="single-col social">
+          <h3 class="column-title">Social</h3> dane
+        </div>
+        <div class="single-col godziny">
+          <h3 class="column-title">Godziny Otwarcia</h3> godziny
+        </div>
+        <div class="single-col galeria">
+          <h3 class="column-title">Galeria</h3>
+          <ul>
+            <li><img src="images/galeria1.jpg" alt=""></li>
+            <li><img src="images/galeria2.jpg" alt=""></li>
+            <li><img src="images/galeria1.jpg" alt=""></li>
+            <li><img src="images/galeria2.jpg" alt=""></li>
+            <li><img src="images/galeria1.jpg" alt=""></li>
+            <li><img src="images/galeria2.jpg" alt=""></li>
+          </ul>
+          <a href="">Więcej zdjęc</a>
         </div>
       </div>
-      <div class="footer-copy">
-        <div class="container">
-          Copyright CoolCafe
-        </div>
+    </div>
+    <div class="footer-copy">
+      <div class="container">
+        Copyright CoolCafe
       </div>
-    </footer>
-    <script>
-  $(document).ready(function(){
-    // menu mobilne
-    $('#main-menu').slicknav({
-      prependTo: '#attach-menu-mobile',
-      label: ''
+    </div>
+  </footer>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2500);
+    }
+  </script>
+  <!-- SLAJDY SEKCJI -->
+  <script>
+    $(document).ready(function() {
+      // menu mobilne
+      $('#main-menu').slicknav({
+        prependTo: '#attach-menu-mobile',
+        label: ''
+      });
+      // kawiarnia galeria
+      $("#kawiarnia-gal > div:gt(0)").hide();
+      $("#sala-gal > div:gt(0)").hide();
+      $("#oferta-gal > div:gt(0)").hide();
+      setInterval(function() {
+        $('#kawiarnia-gal > div:first')
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo('#kawiarnia-gal');
+      }, 3000);
+      setInterval(function() {
+        $('#sala-gal > div:first')
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo('#sala-gal');
+      }, 3000);
+      setInterval(function() {
+        $('#oferta-gal > div:first')
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo('#oferta-gal');
+      }, 3000);
     });
-  });
-</script>
+  </script>
 </body>
 
 </html>
