@@ -301,16 +301,36 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+header a {
+  color: #fff;
+}
+@media all and (max-width: 767px) {
+  header {
+    background: #fff;
+    border-bottom: 2px solid #FF6C00;
+  }
+}
+.shrink {
   background: #fff;
-  border-bottom: 1px solid #000000;
+  border-bottom: 2px solid #FF6C00;
+}
+.shrink a {
+  color: #000;
 }
 .nav-logo {
   float: left;
   padding: 5px;
-  max-height: 120px;
+  max-height: 100px;
 }
 .nav-logo img {
-  max-width: 120px;
+  max-width: 100px;
+}
+@media all and (min-width: 768px) {
+  .nav-logo {
+    display: none;
+  }
 }
 .navbar {
   height: 130px;
@@ -320,7 +340,6 @@ header {
   margin-top: 10px;
 }
 .main-menu-content {
-  float: right;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -329,19 +348,25 @@ ul {
   list-style: none;
 }
 .main-menu-content #main-menu li {
-  float: left;
+  float: right;
   display: block;
 }
 ul li a {
-  color: #000;
+  color: #7520ED;
   text-decoration: none;
   font-size: 25px;
   text-align: center;
   margin-top: 5px;
   font-weight: 400;
-  padding: 20px 14px;
   line-height: 20px;
   transition: all 0.2s;
+}
+@media all and (min-width: 767px) {
+  li:nth-of-type(1),
+  li:nth-of-type(2),
+  li:nth-of-type(3) {
+    float: left!important;
+  }
 }
 ul li a:hover {
   color: green;
@@ -362,6 +387,7 @@ ul li a:hover {
   }
   ul li a {
     font-size: 18px;
+    padding: 8px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -385,8 +411,20 @@ ul li a:hover {
     width: 33.33%;
   }
 }
+.logo-desktop {
+  height: 250px;
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media all and (max-width: 767px) {
+  .logo-desktop {
+    display: none;
+  }
+}
 .top-slider {
-  height: 200px;
+  height: 100vh;
 }
 .button-container {
   position: absolute;
@@ -399,11 +437,13 @@ ul li a:hover {
 .slider-container {
   margin-top: 80px;
   position: relative;
-  max-height: 80vh;
+  max-height: 100vh;
 }
 .slider-container img {
   width: 100%;
-  max-height: 80vh;
+  max-height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 .slides-container {
   position: relative;
@@ -499,4 +539,71 @@ ul li a:hover {
 }
 .slideshow > div {
   position: absolute;
+}
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 60% 0;
+  height: 100vh;
+  position: relative;
+}
+.bx-viewport .main-slide-1 {
+  background-image: url('../images/kawiarnia1.jpg');
+}
+.bx-viewport .main-slide-2 {
+  background-image: url('../images/sala1.jpg');
+}
+.bx-viewport .main-slide-3 {
+  background-image: url('../images/kawiarnia1.jpg');
+}
+.bx-viewport .main-slide-4 {
+  background-image: url('../images/sala1.jpg');
+}
+.main-slider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+}
+.main-slider-content h1 {
+  font-size: 41px;
+  line-height: 33px;
+  font-weight: 400;
+}
+.main-slider-content p {
+  font-size: 18px;
+  margin-top: 25px;
+}
+.top-slider-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.66);
+  z-index: 9;
+}
+.top-slider .bx-wrapper .bx-controls-direction a {
+  height: 60px;
+  width: 42px;
+  margin-top: -20px;
+  opacity: 0.6;
+  background-color: rgba(117, 32, 237, 0.7);
+  border-radius: 1px;
+}
+.top-slider .bx-wrapper .bx-prev {
+  background: url("../images/prev.png") no-repeat center;
+  left: 20px;
+}
+.top-slider .bx-wrapper .bx-next {
+  background: url("../images/next.png") no-repeat center;
+  right: 20px;
 }

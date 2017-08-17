@@ -5,35 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/jquery.bxslider.css">
   <link rel="stylesheet" href="styles/style.css">
   <title>CoolCafe</title>
-  <!-- jQuery -->
+    <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
   <!-- mobilne menu -->
   <script src="js/slicknav.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
 <body>
-  <header>
+  <header id="nav">
     <nav>
       <div class="container">
         <div class="navbar">
           <div class="nav-logo">
-            <img src="images/logo.jpg" alt="">
+            <img src="images/logocool.png" alt="">
           </div>
 
           <div class="main-menu-content">
             <ul id="main-menu">
-              <li><a href="#" class="menu-link-active">Start</a></li>
               <li><a href="#">Kawiarnia</a></li>
               <li><a href="#">Sala Zabaw</a></li>
               <li><a href="#">Oferta</a></li>
+              <li><a href="">Cennik</a></li>
               <li><a href="#">Galeria</a></li>
               <li><a href="#">Kontakt</a></li>
             </ul>
           </div>
+
           <!-- menu mobilne -->
           <div id="attach-menu-mobile">
 
@@ -41,6 +43,7 @@
         </div>
       </div>
     </nav>
+    <img src="images/logocool.png" alt="" class="logo-desktop">
   </header>
   <!-- <div class="top-slider">
       <ul class="bxslider">
@@ -66,7 +69,7 @@
         </li>
       </ul>
     </div> -->
-  <div class="slides-container">
+  <!-- <div class="slides-container">
     <div class="slider-container mySlides">
       <img src="images/kawiarnia1.jpg">
       <div class="slider-info">
@@ -84,7 +87,33 @@
       <button class="slider-button slide-right" onclick="plusDivs(1)">&#10095;</button>
     </div>
 
-  </div>
+  </div> -->
+  <div class="top-slider">
+
+    <ul class="bxslider" id="main-slider">
+<li>
+   <div class="slide main-slide-1">
+     <!-- <div class="top-slider-overlay"></div> -->
+      <div class="container">
+         <div class="main-slider-content">
+            <h1>Organizacja Eventow</h1>
+         </div>
+      </div>
+   </div>
+</li>
+
+<li>
+   <div class="slide main-slide-2">
+     <!-- <div class="top-slider-overlay"></div> -->
+      <div class="container">
+         <div class="main-slider-content">
+            <h1>Produkcja Multimedialna</h1>
+         </div>
+      </div>
+   </div>
+</li>
+</ul>
+</div>
 
   <section class="kawiarnia">
     <div class="container">
@@ -223,6 +252,24 @@
     </div>
   </footer>
   <script>
+        $('#main-slider').bxSlider({
+            mode: 'fade',
+            auto: true,
+            controls: true,
+            pager: false
+        });
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $('#nav').addClass('shrink');
+                } else {
+                    $('#nav').removeClass('shrink');
+                }
+            });
+        });
+    </script>
+  <!-- <script>
     var slideIndex = 1;
     showDivs(slideIndex);
 
@@ -260,7 +307,7 @@
       x[myIndex - 1].style.display = "block";
       setTimeout(carousel, 2500);
     }
-  </script>
+  </script> -->
   <!-- SLAJDY SEKCJI -->
   <script>
     $(document).ready(function() {
@@ -299,6 +346,7 @@
       }, 3000);
     });
   </script>
+
 </body>
 
 </html>
