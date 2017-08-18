@@ -17,33 +17,44 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <header id="nav">
     <nav>
       <div class="container">
         <div class="navbar">
           <div class="nav-logo">
-            <img src="images/logocool.png" alt="">
+            <h1><a href="/"><img src="images/logocool.png" alt=""></a></h1>
           </div>
 
           <div class="main-menu-content">
             <ul id="main-menu">
-              <li><a href="#">Kawiarnia</a></li>
-              <li><a href="#">Sala Zabaw</a></li>
-              <li><a href="#">Oferta</a></li>
-              <li><a href="">Cennik</a></li>
-              <li><a href="#">Galeria</a></li>
-              <li><a href="#">Kontakt</a></li>
+              <ul class="left">
+                <li><a href="#">Kawiarnia</a></li>
+                <li><a href="#">Sala Zabaw</a></li>
+                <li><a href="#">Oferta</a></li>
+              </ul>
+              <ul class="right">
+                <li><a href="">Cennik</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Kontakt</a></li>
+              </ul>
             </ul>
           </div>
 
           <!-- menu mobilne -->
           <div id="attach-menu-mobile">
-
           </div>
         </div>
       </div>
     </nav>
-    <img src="images/logocool.png" alt="" class="logo-desktop">
+    <h1><a href="/"><img src="images/logocool.png" alt="" class="logo-desktop"></a></h1>
   </header>
   <!-- <div class="top-slider">
       <ul class="bxslider">
@@ -124,17 +135,12 @@
           error sed. Quod, optio, impedit.
         </div>
         <div class="single-col">
-          <div id="kawiarnia-gal" class="slideshow">
-            <div>
-              <img src="images/img_fjords.jpg" alt="">
-            </div>
-            <div>
-              <img src="images/img_lights.jpg" alt="">
-            </div>
-            <div>
-              <img src="images/kawiarnia1.jpg" alt="">
-            </div>
-          </div>
+          <ul class="bxslider" id="slider-kawiarnia">
+  <li><img src="images/img_fjords.jpg" alt=""></li>
+  <li> <img src="images/img_lights.jpg" alt=""></li>
+  <li><img src="images/kawiarnia1.jpg" alt=""></li>
+</ul>
+
         </div>
         <div class="single-col cennik">
           <ul>
@@ -158,18 +164,13 @@
           quam, facilis ut fuga temporibus officia.
         </div>
         <div class="single-col">
-          <div id="sala-gal" class="slideshow">
-            <div>
-              <img src="images/img_fjords.jpg" alt="">
-            </div>
-            <div>
-              <img src="images/img_lights.jpg" alt="">
-            </div>
-            <div>
-              <img src="images/kawiarnia1.jpg" alt="">
-            </div>
+          <ul class="bxslider" id="slider-sala">
+  <li><img src="images/img_fjords.jpg" alt=""></li>
+  <li> <img src="images/img_lights.jpg" alt=""></li>
+  <li><img src="images/kawiarnia1.jpg" alt=""></li>
+</ul>
           </div>
-        </div>
+
         <div class="single-col cennik">
           <ul>
             <li>Pierwsza godzina 10zł</li>
@@ -192,17 +193,11 @@
           ipsum eveniet omnis exercitationem tempora delectus!
         </div>
         <div class="single-col">
-          <div id="oferta-gal" class="slideshow">
-            <div>
-              <img src="images/img_fjords.jpg" alt="">
-            </div>
-            <div>
-              <img src="images/img_lights.jpg" alt="">
-            </div>
-            <div>
-              <img src="images/kawiarnia1.jpg" alt="">
-            </div>
-          </div>
+          <ul class="bxslider" id="slider-oferta">
+  <li><img src="images/img_fjords.jpg" alt=""></li>
+  <li> <img src="images/img_lights.jpg" alt=""></li>
+  <li><img src="images/kawiarnia1.jpg" alt=""></li>
+</ul>
         </div>
         <div class="single-col cennik">
           OPIS
@@ -223,13 +218,25 @@
     </div>
   </section>
   <footer>
+
     <div class="footer-main">
+      <div class="overlay">
       <div class="container">
         <div class="single-col social">
-          <h3 class="column-title">Social</h3> dane
+          <h3 class="column-title">Social</h3>
+          <div class="fb-page" data-href="https://www.facebook.com/CoolCafe.SalaZabaw/" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CoolCafe.SalaZabaw/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CoolCafe.SalaZabaw/">Coolcafe</a></blockquote></div>
         </div>
         <div class="single-col godziny">
-          <h3 class="column-title">Godziny Otwarcia</h3> godziny
+          <h3 class="column-title">CoolCafe</h3>
+          <ul>
+            <li>Ożarów Mazowiecki</li>
+            <li>ul. Partyzantów 10</li>
+            <li>Godziny otwarcia:</li>
+            <li>Poniedziałek - Piątek</li>
+            <li>12 - 19</li>
+            <li>Sobota - Niedziela</li>
+            <li>10 - 20</li>
+          </ul>
         </div>
         <div class="single-col galeria">
           <h3 class="column-title">Galeria</h3>
@@ -245,6 +252,7 @@
         </div>
       </div>
     </div>
+    </div>
     <div class="footer-copy">
       <div class="container">
         Copyright CoolCafe
@@ -256,6 +264,24 @@
             mode: 'fade',
             auto: true,
             controls: true,
+            pager: false
+        });
+        $('#slider-kawiarnia').bxSlider({
+            mode: 'fade',
+            auto: true,
+            controls: false,
+            pager: false
+        });
+        $('#slider-sala').bxSlider({
+            mode: 'fade',
+            auto: true,
+            controls: false,
+            pager: false
+        });
+        $('#slider-oferta').bxSlider({
+            mode: 'fade',
+            auto: true,
+            controls: false,
             pager: false
         });
         $(document).ready(function () {
