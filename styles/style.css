@@ -559,6 +559,9 @@ footer {
   height: 100vh;
   position: relative;
 }
+.bx-wrapper .bx-controls-direction a {
+  z-index: 1!important;
+}
 .bx-viewport .main-slide-1 {
   background-image: url('../images/kawiarnia1.jpg');
 }
