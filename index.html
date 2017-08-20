@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/jquery.bxslider.css">
   <link rel="stylesheet" href="styles/style.css">
+  <!-- <link rel="stylesheet" href="styles/strzalka.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Josefin+Sans" rel="stylesheet">
   <title>CoolCafe</title>
     <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -36,14 +38,14 @@
           <div class="main-menu-content">
             <ul id="main-menu">
               <ul class="left">
-                <li><a href="#">Kawiarnia</a></li>
-                <li><a href="#">Sala Zabaw</a></li>
-                <li><a href="#">Oferta</a></li>
+                <li><a href="/#kawiarnia">Kawiarnia</a></li>
+                <li><a href="/#sala">Sala Zabaw</a></li>
+                <li><a href="/#oferta">Oferta</a></li>
               </ul>
               <ul class="right">
-                <li><a href="">Cennik</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="/#cennik">Cennik</a></li>
+                <li><a href="https://www.facebook.com/pg/CoolCafe.SalaZabaw/photos/" target="_blank">Galeria</a></li>
+                <li><a href="/#kontakt">Kontakt</a></li>
               </ul>
             </ul>
           </div>
@@ -56,58 +58,17 @@
     </nav>
     <h1><a href="/"><img src="images/logocool.png" alt="" class="logo-desktop"></a></h1>
   </header>
-  <!-- <div class="top-slider">
-      <ul class="bxslider">
-        <li>
-          <div class="main-slide-1">
-            <div class="container">
-              <div class="main-slide-content">
-                <h1>tresc</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="main-slide-1">
-            <div class="container">
-              <div class="main-slide-content">
-                <h1>tresc</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div> -->
-  <!-- <div class="slides-container">
-    <div class="slider-container mySlides">
-      <img src="images/kawiarnia1.jpg">
-      <div class="slider-info">
-        Kawiarnia
-      </div>
-    </div>
-    <div class="slider-container mySlides">
-      <img src="images/sala1.jpg">
-      <div class="slider-info">
-        Sala Zabaw
-      </div>
-    </div>
-    <div class="button-container">
-      <button class="slider-button slide-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="slider-button slide-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
-
-  </div> -->
   <div class="top-slider">
-
+    <div class="arrow animated bounce"><a href="#kawiarnia">
+  <span class="icon-circle-down"></span></a>
+</div>
     <ul class="bxslider" id="main-slider">
 <li>
    <div class="slide main-slide-1">
      <!-- <div class="top-slider-overlay"></div> -->
       <div class="container">
          <div class="main-slider-content">
-            <h1>Organizacja Eventow</h1>
+            <!-- <h1>Organizacja Eventow</h1> -->
          </div>
       </div>
    </div>
@@ -118,7 +79,7 @@
      <!-- <div class="top-slider-overlay"></div> -->
       <div class="container">
          <div class="main-slider-content">
-            <h1>Produkcja Multimedialna</h1>
+            <!-- <h1>Produkcja Multimedialna</h1> -->
          </div>
       </div>
    </div>
@@ -126,71 +87,76 @@
 </ul>
 </div>
 
-  <section class="kawiarnia">
+  <section class="kawiarnia" id="kawiarnia">
     <div class="container">
-      <h2 class="section-title">Kawiarnia</h2>
+
       <div class="section-content">
         <div class="single-col opis">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quae consequatur rem dolore expedita, placeat asperiores laboriosam a. Ipsam odit, possimus reiciendis doloremque quidem ad quia fuga sunt fugiat, non, dolore distinctio neque eaque quasi,
-          error sed. Quod, optio, impedit.
+          <h2 class="section-title">Kawiarnia</h2>
+          <div class="single-col-content">
+            <p>
+              Podczas zabawy najmłodszych, Państwa czas umili napewno asortyment naszej kawiarni.
+            </p>
+            Oferujemy ciasta:
+            <ul>
+              <li>Szarlotkę</li>
+              <li>Bezę</li>
+              <li>Sernik</li>
+            </ul>
+            </p>
+          </div>
         </div>
         <div class="single-col">
           <ul class="bxslider" id="slider-kawiarnia">
-  <li><img src="images/img_fjords.jpg" alt=""></li>
-  <li> <img src="images/img_lights.jpg" alt=""></li>
-  <li><img src="images/kawiarnia1.jpg" alt=""></li>
+
+            <li><img src="images/kawiarnia7.jpg" alt=""></li>
+            <li><img src="images/kawiarnia3.jpg" alt=""></li>
+            <li><img src="images/kawiarnia4.jpg" alt=""></li>
+            <li><img src="images/kawiarnia5.jpg" alt=""></li>
+            <li><img src="images/kawiarnia6.jpg" alt=""></li>
+            <li><img src="images/kawiarnia8.jpg" alt=""></li>
+            <li><img src="images/kawiarnia9.jpg" alt=""></li>
+
+
 </ul>
 
         </div>
-        <div class="single-col cennik">
-          <ul>
-            <li>Kawa 5zł</li>
-            <li>Herbata 10zł</li>
-            <li>Ciastko 15zł</li>
-            <li>Tort 20zł</li>
-            <li>Wata 25zł</li>
-            <li>Koktajl 30zł</li>
-          </ul>
-        </div>
+
       </div>
     </div>
   </section>
-  <section class="sala">
+  <section class="sala" id="sala">
     <div class="container">
-      <h2 class="section-title">Sala Zabaw</h2>
+
       <div class="section-content">
         <div class="single-col opis">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit magni recusandae praesentium maxime neque voluptatem illum, dolore qui adipisci sed nostrum provident enim ducimus quas error voluptate earum quo harum delectus! Commodi magnam delectus
-          quam, facilis ut fuga temporibus officia.
+          <h2 class="section-title">Sala Zabaw</h2>
+          <div class="single-col-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit magni recusandae praesentium maxime neque voluptatem illum, dolore qui adipisci sed nostrum provident enim ducimus quas error voluptate earum quo harum delectus! Commodi magnam delectus
+            quam, facilis ut fuga temporibus officia.
+          </div>
         </div>
         <div class="single-col">
           <ul class="bxslider" id="slider-sala">
-  <li><img src="images/img_fjords.jpg" alt=""></li>
-  <li> <img src="images/img_lights.jpg" alt=""></li>
-  <li><img src="images/kawiarnia1.jpg" alt=""></li>
+  <li><img src="images/sala1.jpg" alt=""></li>
+  <li> <img src="images/sala2.jpg" alt=""></li>
+  <li><img src="images/sala3.jpg" alt=""></li>
+  <li><img src="images/sala4.jpg" alt=""></li>
+  <li><img src="images/sala5.jpg" alt=""></li>
 </ul>
           </div>
-
-        <div class="single-col cennik">
-          <ul>
-            <li>Pierwsza godzina 10zł</li>
-            <li>Druga godzina 6zł</li>
-            <li>Trzecia godzina 4zł</li>
-            <li>Formuła unlimited 20zł</li>
-            <li>coś tam</li>
-            <li>coś</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
-  <section class="oferta">
+  <section class="oferta" id="oferta">
     <div class="container">
-      <h2 class="section-title">Oferta</h2>
+
       <div class="section-content">
         <div class="single-col opis">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vero est modi voluptatem dicta. Explicabo officia, dolore blanditiis, quasi facilis culpa. Dignissimos eaque, fugit voluptatum quo velit rem aliquid praesentium, laudantium sed possimus eius,
-          ipsum eveniet omnis exercitationem tempora delectus!
+          <h2 class="section-title">Oferta</h2>
+          <div class="single-col-content">
+            Oprócz dobrej zabawy dla dzieci na konsktrukcji zabawowej, oraz pysznego asortymentu w kawiarni, organizujemy przyjęcia urodzinowe dla dzieci wraz z animatorem, różnego rodzaju zajęcia dydaktyczne, zabawy z animatorami, czy spotkania z miłymi puchaczami
+          </div>
         </div>
         <div class="single-col">
           <ul class="bxslider" id="slider-oferta">
@@ -199,22 +165,34 @@
   <li><img src="images/kawiarnia1.jpg" alt=""></li>
 </ul>
         </div>
-        <div class="single-col cennik">
-          OPIS
-        </div>
+
       </div>
     </div>
   </section>
-  <!-- <section class="galeria">
-      <div class="container">
-        <h2 class="section-title">Galeria</h2>
-      </div>
-    </section> -->
-  <section class="kontakt">
+  <section class="kontakt" id="kontakt">
     <div class="container">
-      <h2 class="section-title">Kontakt</h2> mapa + dane
-      <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2907.2630883635507!2d20.81039000428763!3d52.212369871863075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d52.2135439!2d20.8078879!5e0!3m2!1spl!2spl!4v1502390594591" width="100%"
-        height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="section-content">
+      <div class="single-col">
+        <h2 class="section-title">Kontakt</h2>
+        <ul>
+          <li>CoolCafe</li>
+          <li>Ożarów Mazowiecki</li>
+          <li>ul. Partyzantów 10</li>
+          <li>tel. 537 004 024</li>
+          <li>kontakt@coolcafe.pl</li>
+
+        </ul>
+        <div class="fb-page" data-href="https://www.facebook.com/CoolCafe.SalaZabaw/" data-tabs="messages" data-width="360" data-height="300" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/CoolCafe.SalaZabaw/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CoolCafe.SalaZabaw/">Coolcafe/SalaZabaw/Kawiarnia/Urodziny</a></blockquote></div>
+        <div class="fb-button">
+          <a href="https://m.me/CoolCafe.SalaZabaw" target="_blank">
+   Wiadomośc na facebook
+</a>
+        </div>
+      </div>
+      <div class="single-col">  <iframe style="margin-top: 62px;" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2907.2630883635507!2d20.81039000428763!3d52.212369871863075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d52.2135439!2d20.8078879!5e0!3m2!1spl!2spl!4v1502390594591" width="100%"
+          height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+    </div>
     </div>
   </section>
   <footer>
@@ -223,15 +201,12 @@
       <div class="overlay">
       <div class="container">
         <div class="single-col social">
-          <h3 class="column-title">Social</h3>
+          <h3 class="column-title">Facebook</h3>
           <div class="fb-page" data-href="https://www.facebook.com/CoolCafe.SalaZabaw/" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CoolCafe.SalaZabaw/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CoolCafe.SalaZabaw/">Coolcafe</a></blockquote></div>
         </div>
         <div class="single-col godziny">
-          <h3 class="column-title">CoolCafe</h3>
+          <h3 class="column-title">Godziny otwarcia:</h3>
           <ul>
-            <li>Ożarów Mazowiecki</li>
-            <li>ul. Partyzantów 10</li>
-            <li>Godziny otwarcia:</li>
             <li>Poniedziałek - Piątek</li>
             <li>12 - 19</li>
             <li>Sobota - Niedziela</li>
@@ -239,7 +214,7 @@
           </ul>
         </div>
         <div class="single-col galeria">
-          <h3 class="column-title">Galeria</h3>
+          <!-- <h3 class="column-title">Galeria</h3>
           <ul>
             <li><img src="images/galeria1.jpg" alt=""></li>
             <li><img src="images/galeria2.jpg" alt=""></li>
@@ -248,7 +223,7 @@
             <li><img src="images/galeria1.jpg" alt=""></li>
             <li><img src="images/galeria2.jpg" alt=""></li>
           </ul>
-          <a href="">Więcej zdjęc</a>
+          <a href="">Więcej zdjęc</a> -->
         </div>
       </div>
     </div>
@@ -259,11 +234,52 @@
       </div>
     </div>
   </footer>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Cennik:</p>
+      Wejście indywidualne bez limitu czasowego:
+      Poniedziałek - Czwartek: 10zł
+      Piątek - Niedziela: 20zł
+      Świeta: 20zł
+    </div>
+
+  </div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("cennik");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
   <script>
         $('#main-slider').bxSlider({
             mode: 'fade',
             auto: true,
-            controls: true,
+            controls: false,
             pager: false
         });
         $('#slider-kawiarnia').bxSlider({
@@ -295,84 +311,34 @@
             });
         });
     </script>
-  <!-- <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
 
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {
-        slideIndex = 1
-      }
-      if (n < 1) {
-        slideIndex = x.length
-      }
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      x[slideIndex - 1].style.display = "block";
-    }
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1
-      }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 2500);
-    }
-  </script> -->
-  <!-- SLAJDY SEKCJI -->
   <script>
     $(document).ready(function() {
       // menu mobilne
       $('#main-menu').slicknav({
         prependTo: '#attach-menu-mobile',
+        closeOnClick: true,
         label: ''
       });
-      // kawiarnia galeria
-      $("#kawiarnia-gal > div:gt(0)").hide();
-      $("#sala-gal > div:gt(0)").hide();
-      $("#oferta-gal > div:gt(0)").hide();
-      setInterval(function() {
-        $('#kawiarnia-gal > div:first')
-          .fadeOut(1000)
-          .next()
-          .fadeIn(1000)
-          .end()
-          .appendTo('#kawiarnia-gal');
-      }, 3000);
-      setInterval(function() {
-        $('#sala-gal > div:first')
-          .fadeOut(1000)
-          .next()
-          .fadeIn(1000)
-          .end()
-          .appendTo('#sala-gal');
-      }, 3000);
-      setInterval(function() {
-        $('#oferta-gal > div:first')
-          .fadeOut(1000)
-          .next()
-          .fadeIn(1000)
-          .end()
-          .appendTo('#oferta-gal');
-      }, 3000);
     });
-  </script>
+</script>
+<script>
+  // window.addEventListener("hashchange", function() { scrollBy(0, -142) })
+  $("#nav a").click(function() {
+   var id =  $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(id).offset().top-140
+    }, 1000);
+});
 
+// $(".top-slider a").click(function() {
+//  var id =  $(this).attr('href');
+//   $('html, body').animate({
+//       scrollTop: $(id).offset().top-140
+//   }, 1000);
+// });
+
+</script>
 </body>
 
 </html>

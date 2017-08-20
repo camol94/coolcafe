@@ -1,10 +1,27 @@
 out: style.css
 @import "normalize.less";
 @import "slicknav.less";
+@import "strzalka.less";
+
+@section-title-kawiarnia-color: #4B82BC;
+@section-title-sala-color: #653D85;
+@section-title-oferta-color: #DD6E2D;
+@section-title-kontakt-color: #FF3EB5;
+
+@kolor-niebieski: #4B82BC;
+@kolor-fioletowy: #653D85;
+@kolor-pomaranczowy: #DD6E2D;
+@kolor-rozowy: #FF3EB5;
+@kolor-czarny: #000000;
+@kolor-bialy: #ffffff;
+
 body {
   background: #fff;
-  font-size: 16px;
+  font-size: 21px;
+  font-family: 'Josefin Sans', sans-serif;
+
 }
+
 .clearfix {
 	&:after {
 		content: "";
@@ -36,29 +53,35 @@ header {
       }
       @media all and (max-width: 767px) {
         background: #fff;
-        border-bottom: 2px solid #FF6C00;
+        border-bottom: 2px solid @kolor-pomaranczowy;
       }
     }
     .shrink {
       background: #fff;
-      border-bottom: 2px solid #FF6C00;
-      a {
-        color: #000;
-      }
+      border-bottom: 2px solid @kolor-pomaranczowy;
     }
     .nav-logo {
       float: left;
       padding: 5px;
-      max-height: 100px;
+      padding-bottom: 0;
+      max-height: 70px;
       img {
-        max-width: 100px;
+        max-width: 50px;
       }
       @media all and (min-width: 768px) {
         display: none;
       }
     }
     .navbar {
-      height: 140px;
+      height: 60px;
+      @media all and (min-width: 768px) {
+        height: 140px;
+      }
+    }
+    .cennik-btn {
+      cursor: pointer;
+      display: block;
+      color: red;
     }
 .main-menu-content #main-menu {
       display: none;
@@ -76,6 +99,7 @@ header {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+
     }
     ul {
       list-style: none;
@@ -89,10 +113,10 @@ header {
      ul li a {
       color: #7520ED;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 26px;
+      font-weight: 800;
       text-align: center;
       margin-top: 5px;
-      font-weight: 400;
       line-height: 20px;
       transition: all 0.2s;
     }
@@ -104,9 +128,22 @@ header {
     // }
     // }
 
-    ul li a:hover {
-      color: green;
+    ul {
+      li {
+        a {
+          color: @kolor-pomaranczowy;
+          text-transform: uppercase;
+        }
+        &:hover {
+          a {
+            color: @kolor-czarny;
+          }
+        }
+      }
+
+
     }
+
 
     //menu mobilne
 
@@ -117,7 +154,7 @@ header {
     }
 
     .slicknav_btn {
-      margin-top: 55px;
+      margin-top: 25px;
     }
 
     @media screen and (min-width: 768px) {
@@ -131,18 +168,17 @@ header {
       }
 
       ul li a {
-        font-size: 18px;
+        font-size: 19px;
         padding: 8px;
       }
 
     }
 
-    @media screen and (min-width: 992px) {
-
+    @media screen and (min-width: 1020px) {
       ul li a {
-        padding: 20px 22px;
+        padding: 12px;
+        font-size: 25px;
       }
-
     }
 
 .logo {
@@ -152,15 +188,18 @@ header {
 
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 910px) {
   .footer-main {
     .single-col {
-      width: 33.33%;
+      width:33.33%;
     }
   }
-  .sala, .kawiarnia, .oferta {
+}
+@media all and (min-width: 800px) {
+
+  .sala, .kawiarnia, .oferta, .kontakt{
     .single-col {
-      width: 33.33%;
+      width: 50%;
     }
   }
 }
@@ -179,7 +218,8 @@ header {
 // top slider
 .top-slider {
   // height: 200px;
-  height: 100vh;
+  // height: 100vh;
+  position: relative;
 }.button-container {
 
     position: absolute;
@@ -235,11 +275,20 @@ header {
 .sectionSlides2 {
       animation: fading 2s infinite;
 }
+.section-content {
+  padding-top: 70px;
+  .bx-wrapper {
+    margin-top:112px;
+  }
+}
+.kawiarnia, .sala, .oferta {
+  // height: 100vh;
+}
 .section-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 48px;
   position: relative;
-  margin-top: 25px;
+  font-style: italic;
   margin-bottom: 20px;
   &:after {
     content: '';
@@ -262,8 +311,80 @@ header {
             transform: translateX(-50%);
   }
 }
+.kawiarnia {
+  border-top: 3px solid @kolor-pomaranczowy;
+  .section-title {
+    color: @section-title-kawiarnia-color;
+    &:after {
+      background-color: @section-title-kawiarnia-color;
+    }
+    &::before {
+      background-color: @section-title-kawiarnia-color;
+    }
+  }
+}
+.sala {
+  .section-title {
+    color: @section-title-sala-color;
+    &:after {
+      background-color: @section-title-sala-color;
+    }
+    &::before {
+      background-color: @section-title-sala-color;
+    }
+  }
+}
+.oferta {
+  .section-title {
+    color: @section-title-oferta-color;
+    &:after {
+      background-color: @section-title-oferta-color;
+    }
+    &::before {
+      background-color: @section-title-oferta-color;
+    }
+  }
+}
+.kontakt {
+  .section-title {
+    color: @section-title-kontakt-color;
+    &:after {
+      background-color: @section-title-kontakt-color;
+    }
+    &::before {
+      background-color: @section-title-kontakt-color;
+    }
+  }
+}
 .section-content {
   .clearfix;
+}
+.single-col-content {
+  font-size: 24px;
+  padding: 20px;
+  margin: 0 10px;
+
+}
+// kontakt
+
+.kontakt {
+  .single-col {
+    text-align: center;
+  }
+  .fb-page {
+    display: none;
+  }
+  .fb-button {
+    display: block;
+  }
+  @media all and (min-width: 768px) {
+    .fb-page {
+      display: block;
+    }
+    .fb-button {
+      display: none;
+    }
+  }
 }
 // sala, kawiarnia, oferta
 .sala, .kawiarnia, .oferta {
@@ -273,23 +394,28 @@ header {
   }
 
 }
-footer {
-color: #fff;
+
+.social, .godziny, .galeria {
+  padding: 13px 0;
 }
 .overlay {
   width: 100%;
 height: 100%;
 background: rgba(0, 0, 0, 0.66);
 }
+footer {
+color: #fff;
+}
 .footer-main {
   position: relative;
   background: url(../images/footerbg.jpg);
   background-size: cover;
 z-index: 10;
-}
-.godziny {
+.single-col {
   text-align: center;
 }
+}
+
 .galeria {
   ul {
     list-style-type: none;
@@ -329,10 +455,10 @@ z-index: 10;
   z-index: 1!important;
 }
 .bx-viewport .main-slide-1 {
-  background-image: url('../images/kawiarnia1.jpg');
+  background-image: url('../images/slider1.jpg');
 }
 .bx-viewport .main-slide-2 {
-  background-image: url('../images/sala.jpg');
+  background-image: url('../images/slider2.jpg');
 }
 .bx-viewport .main-slide-3 {
   background-image: url('../images/kawiarnia.jpg');
@@ -387,4 +513,107 @@ z-index: 10;
 .top-slider .bx-wrapper .bx-next {
   background: url("../images/next.png") no-repeat center;
   right: 20px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+// STRZAŁKA
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+  z-index: 123;
+  animation-name: bounce;
+@media all and (max-width: 768px) {
+  bottom: 60px;
+}
+background-size: contain;
+a {
+  text-decoration: none;
+}
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+animation-fill-mode:both;
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-ms-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
