@@ -398,11 +398,13 @@ ul li a {
   line-height: 20px;
   transition: all 0.2s;
 }
-ul li a {
+ul li a,
+ul li .cennik-button {
   color: #000000;
   text-transform: uppercase;
 }
-ul li:hover a {
+ul li:hover a,
+ul li:hover .cennik-button {
   color: #DD6E2D;
 }
 .slicknav_menu {
@@ -427,13 +429,9 @@ ul li:hover a {
 }
 .cennik-button {
   cursor: pointer;
-  color: #DD6E2D;
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1;
-}
-.cennik-button:hover {
-  color: #000000;
 }
 @media screen and (min-width: 1020px) {
   ul li a,

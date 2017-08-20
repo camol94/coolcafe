@@ -126,12 +126,12 @@ header {
 
     ul {
       li {
-        a {
+        a, .cennik-button {
           color: @kolor-czarny;
           text-transform: uppercase;
         }
         &:hover {
-          a {
+          a, .cennik-button {
             color: @kolor-pomaranczowy;
           }
         }
@@ -172,14 +172,10 @@ header {
     .cennik-button {
       cursor: pointer;
       // display: block;
-      color: @kolor-pomaranczowy;
       // display: inline-block;
       text-transform: uppercase;
       font-weight: 800;
       line-height: 1;
-      &:hover {
-        color: @kolor-czarny;
-      }
     }
     @media screen and (min-width: 1020px) {
       ul li a, .cennik-button {
