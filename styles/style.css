@@ -433,11 +433,11 @@ ul li:hover .cennik-button {
   font-weight: 800;
   line-height: 1;
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1040px) {
   ul li a,
   .cennik-button {
     padding: 12px;
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 @media all and (max-width: 767px) {
@@ -468,8 +468,7 @@ ul li:hover .cennik-button {
   height: 250px;
   position: fixed;
   top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 5%;
 }
 @media all and (max-width: 767px) {
   .logo-desktop {
@@ -533,9 +532,6 @@ ul li:hover .cennik-button {
 }
 .section-content {
   padding-top: 70px;
-}
-.section-content .bx-wrapper {
-  margin-top: 112px;
 }
 .section-title {
   text-align: center;
