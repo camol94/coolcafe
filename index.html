@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Josefin+Sans" rel="stylesheet">
   <title>CoolCafe</title>
     <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="js/jquery.bxslider.js"></script>
   <!-- mobilne menu -->
   <script src="js/slicknav.js"></script>
@@ -43,7 +43,8 @@
                 <li><a href="#oferta">Oferta</a></li>
               </ul>
               <ul class="right">
-                <li><a href="#cennik">Cennik</a></li>
+                <!-- <li><a href="#cennik">Cennik</a></li> -->
+                <li><span id="cennik" class="cennik-button">Cennik</span></li>
                 <li><a href="https://www.facebook.com/pg/CoolCafe.SalaZabaw/photos/" target="_blank">Galeria</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
               </ul>
@@ -160,9 +161,8 @@
         </div>
         <div class="single-col">
           <ul class="bxslider" id="slider-oferta">
-  <li><img src="images/img_fjords.jpg" alt=""></li>
-  <li> <img src="images/img_lights.jpg" alt=""></li>
-  <li><img src="images/kawiarnia1.jpg" alt=""></li>
+  <li><img src="images/oferta1.jpg" alt=""></li>
+  <li><img src="images/kawiarnia3.jpg" alt=""></li>
 </ul>
         </div>
 
@@ -240,11 +240,15 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p>Cennik:</p>
-      Wejście indywidualne bez limitu czasowego:
-      Poniedziałek - Czwartek: 10zł
-      Piątek - Niedziela: 20zł
-      Świeta: 20zł
+      <p>Cennik:</p><br />
+      Wejście indywidualne bez limitu czasowego:<br />
+      Poniedziałek - Czwartek: 10zł<br />
+      Piątek - Niedziela: 20zł<br />
+      Świeta: 20zł<br /><br />
+      Przyjęcie urodzinowe:<br />
+      10 dzieci: 300zł<br />
+      Każda kolejne dziecko: 30zł<br />
+      Animator: 100zł<br /><br />
     </div>
 
   </div>

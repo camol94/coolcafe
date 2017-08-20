@@ -78,11 +78,7 @@ header {
         height: 140px;
       }
     }
-    .cennik-btn {
-      cursor: pointer;
-      display: block;
-      color: red;
-    }
+
 .main-menu-content #main-menu {
       display: none;
 
@@ -131,12 +127,12 @@ header {
     ul {
       li {
         a {
-          color: @kolor-pomaranczowy;
+          color: @kolor-czarny;
           text-transform: uppercase;
         }
         &:hover {
           a {
-            color: @kolor-czarny;
+            color: @kolor-pomaranczowy;
           }
         }
       }
@@ -167,17 +163,33 @@ header {
           display: block;
       }
 
-      ul li a {
-        font-size: 19px;
+      ul li a, .cennik-button {
+        font-size: 16px;
         padding: 8px;
       }
 
     }
-
+    .cennik-button {
+      cursor: pointer;
+      // display: block;
+      color: @kolor-pomaranczowy;
+      // display: inline-block;
+      text-transform: uppercase;
+      font-weight: 800;
+      line-height: 1;
+      &:hover {
+        color: @kolor-czarny;
+      }
+    }
     @media screen and (min-width: 1020px) {
-      ul li a {
+      ul li a, .cennik-button {
         padding: 12px;
         font-size: 25px;
+      }
+    }
+    @media all and (max-width: 767px) {
+      .cennik-button {
+        display: none;
       }
     }
 
@@ -525,7 +537,7 @@ z-index: 10;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow:hidden;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -533,17 +545,17 @@ z-index: 10;
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 20% auto; /* 15% from the top and centered */
+    padding: 25px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: red;
     float: right;
-    font-size: 28px;
+    font-size: 45px;
     font-weight: bold;
 }
 
